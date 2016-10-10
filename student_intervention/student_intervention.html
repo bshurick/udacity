@@ -11800,7 +11800,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11810,7 +11810,7 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
 
 <span class="c1"># Read student data</span>
-<span class="n">student_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Data/student-data.csv&quot;</span><span class="p">)</span>
+<span class="n">student_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;student-data.csv&quot;</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;Student data read successfully!&quot;</span>
 </pre></div>
 
@@ -11835,7 +11835,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">student_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -11849,7 +11849,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12032,7 +12032,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Calculate number of students</span>
@@ -12055,7 +12055,7 @@ div#notebook {
 <span class="k">print</span> <span class="s2">&quot;Number of features: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;Number of students who passed: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_passed</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;Number of students who failed: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_failed</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;Graduation rate of the class: {:.2f}%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">grad_rate</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Graduation rate of the class: {:.2f}%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">grad_rate</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12072,7 +12072,7 @@ div#notebook {
 Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
-Graduation rate of the class: 0.67%
+Graduation rate of the class: 67.09%
 </pre>
 </div>
 </div>
@@ -12095,7 +12095,7 @@ Graduation rate of the class: 0.67%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Extract feature columns</span>
@@ -12177,7 +12177,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12248,7 +12248,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import any additional functionality you may need here</span>
@@ -12399,7 +12399,7 @@ This model could be a good candidate for this problem, because the data represen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12472,7 +12472,7 @@ This model could be a good candidate for this problem, because the data represen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12503,58 +12503,58 @@ This model could be a good candidate for this problem, because the data represen
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a LogisticRegression using a training set size of 100. . .
-Trained model in 0.0052 seconds
-Made predictions in 0.0007 seconds.
+Trained model in 0.0088 seconds
+Made predictions in 0.0027 seconds.
 F1 score for training set: 0.8852.
-Made predictions in 0.0005 seconds.
+Made predictions in 0.0003 seconds.
 F1 score for test set: 0.5882.
 Training a LogisticRegression using a training set size of 200. . .
-Trained model in 0.0045 seconds
-Made predictions in 0.0014 seconds.
+Trained model in 0.0028 seconds
+Made predictions in 0.0002 seconds.
 F1 score for training set: 0.8195.
-Made predictions in 0.0016 seconds.
+Made predictions in 0.0002 seconds.
 F1 score for test set: 0.7737.
 Training a LogisticRegression using a training set size of 300. . .
-Trained model in 0.0083 seconds
-Made predictions in 0.0004 seconds.
+Trained model in 0.0040 seconds
+Made predictions in 0.0003 seconds.
 F1 score for training set: 0.8305.
-Made predictions in 0.0005 seconds.
+Made predictions in 0.0002 seconds.
 F1 score for test set: 0.7917.
 Training a DecisionTreeClassifier using a training set size of 100. . .
-Trained model in 0.0020 seconds
-Made predictions in 0.0028 seconds.
-F1 score for training set: 1.0000.
+Trained model in 0.0071 seconds
 Made predictions in 0.0009 seconds.
-F1 score for test set: 0.6667.
-Training a DecisionTreeClassifier using a training set size of 200. . .
-Trained model in 0.0047 seconds
+F1 score for training set: 1.0000.
 Made predictions in 0.0006 seconds.
-F1 score for training set: 1.0000.
-Made predictions in 0.0009 seconds.
-F1 score for test set: 0.7200.
-Training a DecisionTreeClassifier using a training set size of 300. . .
-Trained model in 0.0076 seconds
-Made predictions in 0.0007 seconds.
+F1 score for test set: 0.6719.
+Training a DecisionTreeClassifier using a training set size of 200. . .
+Trained model in 0.0033 seconds
+Made predictions in 0.0005 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0004 seconds.
-F1 score for test set: 0.6923.
+F1 score for test set: 0.7107.
+Training a DecisionTreeClassifier using a training set size of 300. . .
+Trained model in 0.0038 seconds
+Made predictions in 0.0004 seconds.
+F1 score for training set: 1.0000.
+Made predictions in 0.0002 seconds.
+F1 score for test set: 0.6917.
 Training a KNeighborsClassifier using a training set size of 100. . .
-Trained model in 0.0026 seconds
-Made predictions in 0.0054 seconds.
+Trained model in 0.0069 seconds
+Made predictions in 0.0068 seconds.
 F1 score for training set: 0.8305.
-Made predictions in 0.0038 seconds.
+Made predictions in 0.0024 seconds.
 F1 score for test set: 0.7385.
 Training a KNeighborsClassifier using a training set size of 200. . .
-Trained model in 0.0020 seconds
-Made predictions in 0.0130 seconds.
+Trained model in 0.0008 seconds
+Made predictions in 0.0054 seconds.
 F1 score for training set: 0.8222.
-Made predictions in 0.0049 seconds.
+Made predictions in 0.0047 seconds.
 F1 score for test set: 0.8138.
 Training a KNeighborsClassifier using a training set size of 300. . .
-Trained model in 0.0031 seconds
-Made predictions in 0.0192 seconds.
+Trained model in 0.0010 seconds
+Made predictions in 0.0116 seconds.
 F1 score for training set: 0.8552.
-Made predictions in 0.0135 seconds.
+Made predictions in 0.0066 seconds.
 F1 score for test set: 0.8267.
 </pre>
 </div>
@@ -12731,7 +12731,7 @@ F1 score for test set: 0.8267.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Logistic regression works by creating coefficients for each feature in the dataset (plus an additional intercept coefficient) and then iterates through the dataset many times and changes each coefficient in small incremental steps that make the training predictions slightly more accurate with each iteration until the model parameters converge and stop changing. The resulting model can then be used to predict the probability that each event will be a member of a class (i.e. passing) or not. The model coefficients can each be interpreted as the linear increase in log-odds for every one-unit increase in the coefficient variable.</p>
+<p><strong>Answer: </strong> Logistic regression works by creating coefficients for each feature in the dataset (plus an additional intercept coefficient) and then iterates through the dataset many times and makes incremental changes to the model that make the training predictions slightly more accurate after each iteration. Once the model reaches a point where it doesn't change much anymore, or if it reaches a maximum number of iterations, then the iterations stop and the model has finished training. The resulting model can then be used to predict the probability that each event will be a member of a class (i.e. passing) or not. The model coefficients can each be interpreted as the linear increase in log-odds for every one-unit increase in the coefficient variable.</p>
 
 </div>
 </div>
@@ -12762,7 +12762,7 @@ F1 score for test set: 0.8267.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12805,10 +12805,18 @@ F1 score for test set: 0.8267.
 
 
 <div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python2.7/site-packages/sklearn/metrics/classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  &#39;precision&#39;, &#39;predicted&#39;, average, warn_for)
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Made predictions in 0.0002 seconds.
+<pre>Made predictions in 0.0003 seconds.
 Tuned model has a training F1 score of 0.8088.
-Made predictions in 0.0002 seconds.
+Made predictions in 0.0004 seconds.
 Tuned model has a testing F1 score of 0.8590.
 </pre>
 </div>
