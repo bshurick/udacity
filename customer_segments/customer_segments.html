@@ -11782,7 +11782,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11835,7 +11835,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -11962,7 +11962,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12062,7 +12062,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-For the first customer I've selected, the majority of items the customer purchases in a year are Fresh items, next Frozen and then quite a bit of Grocery and Deli items as well. This customer could represent a restaurant which continuously needs to buy fresh ingredients to make immediately in their meals. A restaurant would likely stock a few items in the freezer, such a desserts, and have some deli items on the menu for lunch. The second customer I've selected buys predominantly grocery items as well as a high volumn of other items such as milk, detergents and paper, and it has a much smaller amount of Fresh and Deli purchases, and could be a grocery store or smaller market. The last customer purchases mainly Frozen items and some Fresh items, and this could be something like a fast-food restaurant which preserves cheaper frozen food until it's ordered by one of their customers.</p>
+For the first customer I've selected, the majority of items the customer purchases in a year are Fresh items, next Frozen and then quite a bit of Grocery and Deli items as well. Compared to the population in the dataset, this customer purchases more Fresh and Delicatessen items than 75% of other customers. This customer could represent a restaurant which continuously needs to buy fresh ingredients to make immediately in their meals. A restaurant would likely stock a few items in the freezer, such a desserts, and have some deli items on the menu for lunch.</p>
+<p>The second customer I've selected buys predominantly grocery items as well as a high volumn of other items such as milk, detergents and paper, and it has a much smaller amount of Fresh and Deli purchases. Compared with the rest of the population, this customer purchases more Grocery, Milk, and Detergents_Paper items than at least 75% of customers. This customer could be a grocery store or smaller market.</p>
+<p>The last customer purchases mainly Frozen items and some Fresh items, and this could be something like a fast-food restaurant or small café which preserves cheaper frozen food until it's ordered by one of their customers. This customer purchases more frozen items than 75% of customers, but below purchases below median volumes for every other product type.</p>
 
 </div>
 </div>
@@ -12089,7 +12091,7 @@ For the first customer I've selected, the majority of items the customer purchas
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12100,7 +12102,7 @@ For the first customer I've selected, the majority of items the customer purchas
 
 <span class="c1"># TODO: Split the data into training and testing sets using the given feature as the target</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> 
-                                                    <span class="n">data</span><span class="o">.</span><span class="n">Milk</span><span class="p">,</span> 
+                                                    <span class="n">data</span><span class="o">.</span><span class="n">Detergents_Paper</span><span class="p">,</span> 
                                                     <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
                                                     <span class="n">random_state</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
 
@@ -12123,15 +12125,7 @@ For the first customer I've selected, the majority of items the customer purchas
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Score (R^2): 0.90269
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/usr/local/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
-  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
+<pre>Score (R^2): 0.62598
 </pre>
 </div>
 </div>
@@ -12157,7 +12151,7 @@ For the first customer I've selected, the majority of items the customer purchas
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> 
-I attempted to predict the 'Detergents_Paper' feature from the original dataset using the other features, and the resulting R^2 value is 0.90269, which is very high. The fact that the other features in the dataset can predict the Detergents_Paper feature implies that in fact that feature is probably not so important, since the total variation in that feature that can be explained by the other features in the dataset is above 90%. Therefore, removing Detergents_Paper would likely not have a significant impact in our task to identify customers' spending habits.</p>
+I attempted to predict the 'Detergents_Paper' feature from the original dataset using the other features, and the resulting R^2 value is 0.62598, which is very high. The fact that the other features in the dataset can predict the Detergents_Paper feature implies that in fact that feature is probably not so important, since the total variation in that feature that can be explained by the other features in the dataset is above 60%. Therefore, removing Detergents_Paper would likely not have a significant impact in our task to identify customers' spending habits.</p>
 
 </div>
 </div>
@@ -18932,7 +18926,11 @@ CAAAGJ5gBAAADE8wAgAAhicYAQAAw/v/Jyd2nN2lSHkAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Approximately 70.7% of the variance in the dataset is explained by the first two principal components. About 93.1% of the variance is explained by the first four principal components. In the visualization above, the first principal component has negative weight on customer spending across the dimensions of Detergents_Paper, Grocer, and Milk, with the only positive weights on Frozen and Fresh products. The second dimension has negative weights on all features, especially Fresh products, and likely represents low-volume customers. The third dimension has high weight on Delicatessen and Frozen spending and negative weight on Fresh spending. The fourth dimension has very high weight on frozen spending and negative weight on Delicatessen spending.</p>
+<p><strong>Answer:</strong> Approximately 70.7% of the variance in the dataset is explained by the first two principal components. About 93.1% of the variance is explained by the first four principal components.</p>
+<p>In the visualization above, the first principal component has strong, negative correlation on customer spending across the product features of Detergents_Paper, Grocer, and Milk. A grocery store might have a large negative value along this dimension.</p>
+<p>The second dimension has strong, negative correlations with Fresh, Frozen, and Delicatessen features. Restaurants might have a large negative value along this dimension.</p>
+<p>The third dimension has high correlation with Delicatessen and Frozen spending and negative correlation with Fresh spending. A deli might have a high value along this dimension.</p>
+<p>The fourth dimension has very high correlation with frozen spending and negative correlation with Delicatessen spending. An ice cream shop might have a high value along this dimension.</p>
 
 </div>
 </div>
@@ -20194,7 +20192,9 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> I think the results of the above predictions are in line with what I had originally guessed in question #1, which was that the first data and third points were potentially restaurants, and the middle point was potentially a grocery store based on the high volume of grocery items it purchases.</p>
+<p><strong>Answer:</strong>
+For my sample data points 0 and 2, I would predict that they fit best in Cluster 1, because their buying habits both seem to be most similar to what a restaurant would purchase. Sample data point 1 would fit best in Cluster 0, because the purchases seem to match more closely with a grocery store than a restaurant.</p>
+<p>I think the results of the above predictions are in line with what I had originally guessed in question #1, which was that the first data and third points were potentially restaurants, and the middle point was potentially a grocery store based on the high volume of grocery items it purchases.</p>
 
 </div>
 </div>
