@@ -1,4 +1,4 @@
 # Udacity
 
-Coursework from Udacity machine-learning nanodegree
+Coursework from Udacity 
 
